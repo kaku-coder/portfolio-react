@@ -1,0 +1,410 @@
+.contact-section {
+  background-color: #ffffff; /* Contrast continuity */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 960px; /* Perfectly aligned elegant layout */
+  margin: 0 auto;
+}
+
+/* Title Block */
+.contact-title-block {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.contact-title-block h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #0f172a;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  width: 100%;
+  align-items: start;
+}
+
+/* Left Panel */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Retro Info Card */
+.contact-info-card {
+  background-color: #EBE9F5;
+  border: 2px solid #0f172a;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.contact-info-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+}
+
+.contact-info-card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.08);
+  padding-bottom: 0.4rem;
+}
+
+.detail-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.detail-val {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.detail-val.badge-green {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #16a34a;
+  background-color: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  letter-spacing: 0.025em;
+}
+
+/* Active submission console */
+.contact-terminal {
+  background-color: #EBE9F5;
+  border: 2px solid #0f172a;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  background-color: rgba(15, 23, 42, 0.05);
+  border-bottom: 1.5px solid #0f172a;
+  position: relative;
+}
+
+.terminal-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #0f172a;
+}
+
+.terminal-header .dot.red { background-color: #ef4444; }
+.terminal-header .dot.yellow { background-color: #eab308; }
+.terminal-header .dot.green { background-color: #22c55e; }
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.terminal-body {
+  background-color: #0f172a; /* Deep Slate Black Terminal */
+  padding: 1.25rem 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #38bdf8; /* Cyan Neon text */
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.terminal-line {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.line-prefix {
+  color: rgba(56, 189, 248, 0.4);
+}
+
+.line-text {
+  color: #e2e8f0;
+}
+
+.active-line .line-text {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.blink-cursor {
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Right Panel Brutalist Form */
+.contact-right {
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 4px 4px 0px #0f172a;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.form-group input, .form-group textarea {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.8rem 1rem;
+  background-color: #EBE9F5;
+  border: 2px solid #0f172a;
+  border-radius: 12px;
+  color: #0f172a;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  background-color: #ffffff;
+  border-color: #5c40aa; /* Lavender Indigo focus border */
+  box-shadow: 4px 4px 0px rgba(92, 64, 170, 0.15);
+}
+
+.form-submit-btn {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  font-size: 0.925rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.form-submit-btn:hover {
+  background-color: #ffffff;
+  color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(15, 23, 42, 0.1);
+}
+
+.form-submit-btn:disabled {
+  background-color: #94a3b8;
+  border-color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Success Banner */
+.submit-success-banner {
+  background-color: rgba(34, 197, 94, 0.08);
+  border: 1.5px solid rgba(34, 197, 94, 0.25);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #16a34a;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .contact-title-block h1 {
+    font-size: 2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-right {
+    box-shadow: none;
+    padding: 1.5rem;
+  }
+}
+
+/* ══════════════════════════════════════
+   DARK THEME OVERRIDES
+══════════════════════════════════════ */
+[data-theme="dark"] .contact-section {
+  background-color: #0f172a;
+}
+
+[data-theme="dark"] .contact-title-block h1 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .section-divider {
+  background-color: #334155;
+}
+
+[data-theme="dark"] .contact-info-card {
+  background-color: #1e293b;
+  border-color: rgba(148, 163, 184, 0.15);
+}
+
+[data-theme="dark"] .contact-info-card h3 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .contact-info-card p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .detail-row {
+  border-bottom-color: rgba(148, 163, 184, 0.08);
+}
+
+[data-theme="dark"] .detail-label {
+  color: #64748b;
+}
+
+[data-theme="dark"] .detail-val {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .contact-terminal {
+  background-color: #1e293b;
+  border-color: rgba(148, 163, 184, 0.15);
+}
+
+[data-theme="dark"] .terminal-header {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-bottom-color: rgba(148, 163, 184, 0.12);
+}
+
+[data-theme="dark"] .terminal-header .dot {
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+[data-theme="dark"] .contact-right {
+  background-color: #1e293b;
+  border-color: rgba(148, 163, 184, 0.15);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .form-group label {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+  background-color: #0f172a;
+  border-color: rgba(148, 163, 184, 0.15);
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .form-group input::placeholder,
+[data-theme="dark"] .form-group textarea::placeholder {
+  color: #475569;
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group textarea:focus {
+  background-color: #1e293b;
+  border-color: #7c5cbf;
+  box-shadow: 4px 4px 0px rgba(124, 92, 191, 0.2);
+}
+
+[data-theme="dark"] .form-submit-btn {
+  background-color: #334155;
+  border-color: #334155;
+}
+
+[data-theme="dark"] .form-submit-btn:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}

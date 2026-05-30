@@ -1,0 +1,422 @@
+.skill-section {
+  background-color: #ffffff; /* White background to keep clean continuity with AboutPage */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-container {
+  width: 100%;
+  max-width: 960px; /* Aligns with the 880px-960px elegant layout */
+  margin: 0 auto;
+}
+
+/* Title Block */
+.skill-title-block {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.terminal-badge {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0ea5e9;
+  background-color: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 0.85rem;
+}
+
+.skill-title-block h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #0f172a;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.command-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 1.75rem;
+  width: 100%;
+}
+
+.command-grid-item {
+  background-color: #EBE9F5; /* Beautiful Lavender background matching AboutPage */
+  border: 2px solid #0f172a; /* Thin crisp dark border */
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Widget Header */
+.widget-header {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #475569;
+  padding: 1rem 1.25rem;
+  border-bottom: 1.5px solid rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.status-indicator-green, .status-indicator-blue, .status-indicator-amber {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px currentColor;
+}
+.status-indicator-green { color: #22c55e; background-color: #22c55e; }
+.status-indicator-blue { color: #0ea5e9; background-color: #0ea5e9; }
+.status-indicator-amber { color: #eab308; background-color: #eab308; }
+
+/* Selector Widget */
+.tech-selector-widget {
+  padding-bottom: 1.5rem;
+}
+
+.tech-buttons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.tech-btn {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: left;
+}
+
+.tech-btn-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.tech-btn-status {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.025em;
+}
+
+.tech-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.tech-btn.active {
+  background-color: #0f172a;
+  border-color: #0f172a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--tech-color-glow);
+}
+
+.tech-btn.active .tech-btn-name {
+  color: #ffffff;
+}
+
+.tech-btn.active .tech-btn-status {
+  color: #38bdf8; /* Light blue accent */
+}
+
+/* Diagnostics Widget */
+.diagnostics-body {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.gauge-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  stroke: rgba(15, 23, 42, 0.05);
+}
+
+.progress-ring-fill {
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.3s ease;
+  stroke-linecap: round;
+}
+
+.gauge-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1;
+}
+
+.gauge-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
+  margin-top: 2px;
+  letter-spacing: 0.05em;
+}
+
+.metadata-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.825rem;
+  border-bottom: 1px dashed rgba(15, 23, 42, 0.06);
+  padding-bottom: 0.4rem;
+}
+
+.meta-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.meta-val {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.meta-val.badge {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.025em;
+}
+
+.diagnostics-desc {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.diagnostics-desc p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1.5px solid #0f172a;
+  border-radius: 12px;
+}
+
+/* Console Widget */
+.console-widget {
+  grid-column: span 2;
+}
+
+.console-body {
+  background-color: #0f172a; /* Deep Slate Black Terminal */
+  padding: 1.25rem 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #38bdf8; /* Cyan Glow text */
+  min-height: 120px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.console-line {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.console-time {
+  color: rgba(56, 189, 248, 0.4);
+}
+
+.console-text {
+  color: #e2e8f0;
+}
+
+.live-cursor-line .console-text {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.text-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .skill-section {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .skill-title-block {
+    margin-bottom: 2.25rem;
+  }
+
+  .skill-title-block h1 {
+    font-size: 2rem;
+  }
+
+  .command-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .console-widget {
+    grid-column: span 1;
+  }
+
+  .diagnostics-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .tech-buttons-list {
+    padding: 1rem;
+    gap: 0.65rem;
+  }
+
+  .tech-btn {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ══════════════════════════════════════
+   DARK THEME OVERRIDES
+══════════════════════════════════════ */
+[data-theme="dark"] .skill-section {
+  background-color: #1e293b;
+}
+
+[data-theme="dark"] .skill-title-block h1 {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .section-divider {
+  background-color: #334155;
+}
+
+[data-theme="dark"] .command-grid-item {
+  background-color: #0f172a;
+  border-color: rgba(148, 163, 184, 0.15);
+}
+
+[data-theme="dark"] .widget-header {
+  color: #64748b;
+  border-bottom-color: rgba(148, 163, 184, 0.08);
+}
+
+[data-theme="dark"] .tech-btn {
+  background-color: #1e293b;
+  border-color: rgba(148, 163, 184, 0.15);
+}
+
+[data-theme="dark"] .tech-btn-name {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .tech-btn-status {
+  color: #64748b;
+}
+
+[data-theme="dark"] .gauge-value {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .gauge-label {
+  color: #64748b;
+}
+
+[data-theme="dark"] .meta-label {
+  color: #64748b;
+}
+
+[data-theme="dark"] .meta-val {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .meta-row {
+  border-bottom-color: rgba(148, 163, 184, 0.06);
+}
+
+[data-theme="dark"] .diagnostics-desc p {
+  background-color: #0f172a;
+  border-color: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .progress-ring-bg {
+  stroke: rgba(148, 163, 184, 0.08);
+}
