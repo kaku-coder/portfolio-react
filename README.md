@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm Prakash Das
 
-### MERN Stack Developer · Open For Hire · Delhi, India
+### MERN Stack Developer · Open For Hire · Bhubaneswar, Odisha, India
 
 [![GitHub](https://img.shields.io/badge/GitHub-kaku--coder-181717?style=for-the-badge&logo=github)](https://github.com/kaku-coder)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Prakash%20Das-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/prakash-das-8374b5296/)
@@ -156,7 +156,7 @@ Got a project idea or job opportunity? Let's talk!
 | 📧 Email | [devilprakashdas@gmail.com](mailto:devilprakashdas@gmail.com) |
 | 💼 LinkedIn | [prakash-das-8374b5296](https://www.linkedin.com/in/prakash-das-8374b5296/) |
 | 🐙 GitHub | [kaku-coder](https://github.com/kaku-coder) |
-| 📍 Location | Delhi, India |
+| 📍 Location | Bhubaneswar, Odisha, India |
 | 🟢 Status | **Open For Hire** |
 
 ---
