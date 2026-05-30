@@ -1,0 +1,9 @@
+# robots.txt — Prakash Das Portfolio
+# https://kaku-coder.github.io/portfolio-react/
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://kaku-coder.github.io/portfolio-react/sitemap.xml
